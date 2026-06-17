@@ -40,15 +40,15 @@ export function Navbar() {
         boxShadow: '0 4px 32px rgba(0,0,0,0.5), 0 0 0 1px rgba(124,92,252,0.08)'
       } : {}}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 xl:px-32 flex justify-between items-center py-4">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-24 xl:px-32 flex justify-between items-center py-3 lg:py-4">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="flex items-center gap-2 sm:gap-3 font-bold text-lg sm:text-xl"
+          className="flex items-center gap-2 sm:gap-3 font-bold text-base sm:text-lg lg:text-xl"
           style={{ fontFamily: 'Syne, sans-serif' }}
         >
           <div className="relative">
-            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center font-black text-white text-base sm:text-lg"
+            <div className="w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9 rounded-lg sm:rounded-xl flex items-center justify-center font-black text-white text-sm sm:text-base lg:text-lg"
               style={{ background: 'linear-gradient(135deg, #7c5cfc, #00e5ff)', boxShadow: '0 0 20px rgba(124,92,252,0.5)' }}>
               K
             </div>
@@ -57,7 +57,7 @@ export function Navbar() {
         </motion.div>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-5 lg:gap-8">
           {navLinks.map((link, i) => (
             <motion.a
               key={link.name}
@@ -65,7 +65,7 @@ export function Navbar() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.05 }}
-              className="text-sm font-medium transition-all duration-300 relative group"
+              className="text-xs lg:text-sm font-medium transition-all duration-300 relative group"
               style={{ color: '#475569', fontFamily: 'DM Sans, sans-serif' }}
               onMouseEnter={e => e.target.style.color = '#0f172a'}
               onMouseLeave={e => e.target.style.color = '#475569'}
@@ -77,7 +77,7 @@ export function Navbar() {
           ))}
           <a
             href="#contact"
-            className="btn-primary text-white px-5 py-2 rounded-xl text-sm font-semibold"
+            className="btn-primary text-white px-4 py-1.5 lg:px-5 lg:py-2 rounded-lg lg:rounded-xl text-xs lg:text-sm font-semibold"
           >
             Hire Me ✦
           </a>

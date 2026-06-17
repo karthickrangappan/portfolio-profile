@@ -113,7 +113,7 @@ export function Projects() {
         </div>
 
         {/* PROJECT GRID */}
-        <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 lg:gap-10">
+        <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 lg:gap-10 justify-items-center">
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project) => (
               <motion.div
@@ -124,7 +124,7 @@ export function Projects() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 whileHover={{ y: -8, boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.6)' }}
                 transition={{ duration: 0.4 }}
-                className="group relative h-[420px] rounded-[2.5rem] overflow-hidden cursor-pointer"
+                className="group relative w-full max-w-[340px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px] xl:max-w-[460px] h-[340px] sm:h-[320px] md:h-[360px] lg:h-[380px] xl:h-[400px] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden cursor-pointer"
                 style={{ border: '1px solid #e2e8f0' }}
               >
                 {/* Image */}
